@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.SigninProject" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/teal_700</item>
+        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorOnPrimary">@color/green</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    //自定义style
+    <style name="MyDialogStyle" parent="Theme.AppCompat.Light.Dialog">
+        <!--去掉标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--点击空白处退出-->
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <!--窗体背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--窗体是否浮动-->
+        <item name="android:windowIsFloating">true</item>
+        <!--背景是否昏暗-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!--昏暗数量-->
+        <item name="android:backgroundDimAmount">0.6</item>
+        <!--进入退出动画-->
+        <item name="android:windowAnimationStyle">@style/inandoutAnimation</item>
+    </style>
+
+    <style name="inandoutAnimation" parent="@android:style/Animation.Dialog">
+        <item name="android:windowEnterAnimation">@anim/dialog_anim_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_anim_out</item>
+    </style>
+</resources>
